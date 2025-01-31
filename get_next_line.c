@@ -84,6 +84,7 @@ static char	*find_line(char **remainder, int length_line)
 		i++;
 	}
 	line[i] = '\0';
+	free(line);
 	new_reminder = ft_substr(ptr, i);
 	free(*remainder);
 	*remainder = new_reminder;
